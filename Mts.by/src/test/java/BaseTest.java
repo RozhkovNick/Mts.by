@@ -13,6 +13,10 @@ public class BaseTest {
         options.addArguments("--remote-allow-origins=*");
         return options;
     }
+    @BeforeClass
+    public static void setupClass() {
+        WebDriverManager.chromedriver().setup();
+    }
 
     @Before
     public void beforeTest() {
